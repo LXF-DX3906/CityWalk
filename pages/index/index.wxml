@@ -1,0 +1,34 @@
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">首页</view>
+</cu-custom>
+<swiper class="{{['screen-swiper',dotStyle?'square-dot':'round-dot']}}" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="5000" duration="500">
+  <block wx:for="{{swiperList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <swiper-item>
+      <block wx:if="{{item.type=='image'}}">
+        <image src="{{item.url}}" mode="aspectFill"></image>
+      </block>
+      <block wx:if="{{item.type=='video'}}">
+        <video src="{{item.url}}" autoplay loop muted="{{true}}" show-play-btn="{{false}}" controls="{{false}}" objectFit="cover"></video>
+      </block>
+    </swiper-item>
+  </block>
+</swiper>
+
+<scroll-view class="bg-white nav" scroll-x>
+  <view class="flex text-center">
+    <block wx:for="{{2}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <view class="{{['cu-item flex-sub',index==TabCur?'text-orange cur':'']}}" data-id="{{index}}" data-event-opts="{{[['tap',[['tabSelect',['$event']]]]]}}" bindtap="__e">{{'Tab'+index+''}}</view>
+    </block>
+  </view>
+</scroll-view>
+
+<view class="cu-card case" wx:for="{{listOfSelectedRoutes}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+  <view class="cu-item shadow">
+    <view class="image">
+      <image src="{{item.images[0]}}" mode="aspectFill" lazy-load="true"></image>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/dynamic/dynamic",
+    "pages/map/map",
+    "pages/activity/activity",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ColorUI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#1296DB",
+    "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "static/images/tabbar/tabbar_index.png",
+      "selectedIconPath": "static/images/tabbar/tabbar_index_s.png"
+    },
+    {
+      "pagePath": "pages/dynamic/dynamic",
+      "text": "动态",
+      "iconPath": "static/images/tabbar/tabbar_dynamic.png",
+      "selectedIconPath": "static/images/tabbar/tabbar_dynamic_s.png"
+    },
+    {
+      "pagePath": "pages/map/map",
+      "text": "地图",
+      "iconPath": "static/images/tabbar/tabbar_map.png",
+      "selectedIconPath": "static/images/tabbar/tabbar_map_s.png"
+    },
+    {
+      "pagePath": "pages/activity/activity",
+      "text": "活动",
+      "iconPath": "static/images/tabbar/tabbar_activity.png",
+      "selectedIconPath": "static/images/tabbar/tabbar_activity_s.png"
+    },
+    {
+      "pagePath": "pages/profile/profile",
+      "text": "我的",
+      "iconPath": "static/images/tabbar/tabbar_personalPage.png",
+      "selectedIconPath": "static/images/tabbar/tabbar_personalPage_s.png"
+    }
+    ]
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

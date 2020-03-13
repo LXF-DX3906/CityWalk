@@ -1,0 +1,70 @@
+<!--pages/dynamic/dynamic.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">动态</view>
+</cu-custom>
+
+<view class="cu-card dynamic no-card">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url(https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELNGWvbEZeSHMsXYZvEPnyYLR9UIGMhsRDDjOgbl11NjXoZvhcvL6tDORKOKMdxxrZXRHgl75ibNbw/132);"></view>
+        <view class="content flex-sub">
+          <view>尘</view>
+          <view class="text-gray text-sm flex justify-between">2019年12月3日</view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content">武康路打卡~</view>
+    <view class="{{['grid flex-sub padding-lr',isCard?'col-3 grid-square':'col-1']}}">
+      <block wx:for="{{isCard?9:1}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <view class="{{['bg-img',isCard?'':'only-img']}}" style="background-image:url({{dynamicCoverList[0].tempFileURL}});"></view>
+      </block>
+    </view>
+    <view class="text-gray text-sm text-right padding">
+      <text class="cuIcon-attentionfill margin-lr-xs"></text>10
+      <text class="cuIcon-appreciatefill margin-lr-xs"></text>20
+      <text class="cuIcon-messagefill margin-lr-xs"></text>30</view>
+    <view class="cu-list menu-avatar comment solids-top">
+      <view class="cu-item">
+        <view class="cu-avatar round" style="background-image:url(http://img2.imgtn.bdimg.com/it/u=23084897,262291329&fm=11&gp=0.jpg);"></view>
+        <view class="content">
+          <view class="text-grey">超甜的布丁</view>
+          <view class="text-gray text-content text-df">喜欢</view>
+          <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+            <view class="flex">
+              <view>尘：</view>
+              <view class="flex-sub">谢谢~😜</view>
+            </view>
+          </view>
+          <view class="margin-top-sm flex justify-between">
+            <view class="text-gray text-df">2018年12月4日</view>
+            <view>
+              <text class="cuIcon-appreciatefill text-red"></text>
+              <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="cu-item">
+        <view class="cu-avatar round" style="background-image:url(http://img0.imgtn.bdimg.com/it/u=3162816245,4100265419&fm=11&gp=0.jpg);"></view>
+        <view class="content">
+          <view class="text-grey">南馆潇湘</view>
+          <view class="text-gray text-content text-df">好漂亮鸭！</view>
+          <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+            <view class="flex">
+              <view>尘：</view>
+              <view class="flex-sub">😄</view>
+            </view>
+          </view>
+          <view class="margin-top-sm flex justify-between">
+            <view class="text-gray text-df">2018年12月4日</view>
+            <view>
+              <text class="cuIcon-appreciate text-gray"></text>
+              <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

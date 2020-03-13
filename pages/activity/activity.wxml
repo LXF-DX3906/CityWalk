@@ -1,0 +1,4 @@
+<!--pages/activity/activity.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">活动</view>
+</cu-custom>
